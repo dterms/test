@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+
+        <div class="container">
+            <div class="left-colum">
+                <div class="border"></div>
+                <div class="title">
+                    <h1>Student Grade System</h1>
+                </div>
+            </div>
+            <div class="right-colum">
+                <form action="">
+                    <input type="text" placeholder="Programming" id="web">
+                    <input type="text" placeholder="Mathmetics" id="python">
+                    <input type="text" placeholder="Security" id="security">
+                    <input type="text" placeholder="Networking" id="system">
+                    <input type="button" value="Get your result" class="submit">
+                </form>
+            </div>
+            <p class="result"></p>
+        </div>
+        
+    
+    </section>
+    
+
+    <script>
+
+        let submit = document.querySelector('.submit').addEventListener('click', () => {
+
+
+            let web      = document.querySelector('#web').value;
+            let python   = document.querySelector('#python').value;
+            let security = document.querySelector('#security').value;
+            let system   = document.querySelector('#system').value;
+
+            let totalMarks = parseFloat(web) + parseFloat(python) + parseFloat(security) + parseFloat(system);
+            let parcentage = Math.floor((totalMarks/400) * 100);
+
+            let grades;
+            
+            if(isNaN(totalMarks)){
+                alert('Please enter your all subject marks');
+            }
+
+            if(parcentage <= 80){
+                grades = 'A+';
+            } else if( parcentage <= 70 ){
+                grades = 'A'
+            } else if(parcentage <= 60){
+                grades = 'B';
+            } else if( parcentage <= 50 ){
+                grades = 'C';
+            } else if( parcentage <= 40){
+                grades = 'D';
+            } else {
+                grades = 'F';
+            }
+
+            if(parcentage < 0){
+                alert('Hey man why are you trying to trick my system. Please don\'t do this');
+            } else if(parcentage <= 39.5) {
+                let result   = document.querySelector('.result').innerHTML = `Out of 400 you got ${totalMarks} and your parcentage is ${parcentage}%. You are failed`;
+            } else if(parcentage > 40 && parcentage <= 100){
+                let result   = document.querySelector('.result').innerHTML = `Out of 400 you got ${totalMarks} and your parcentage is ${parcentage}%. You are passed`;
+            } else {
+                alert('Hey man why are you trying to trick my system. Please don\'t do this');
+            }
+        
+        });
+
+    </script>
+
+</body>
+</html>

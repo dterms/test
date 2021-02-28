@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	background: url("exams.jpg");
+	background-position: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-attachment: fixed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 40%;
+  margin: 200px auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 30px;
+  height: 350px;
+  position: relative;
+}
+
+.left-colum {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-top: 50px;
+}
+
+.border {
+  background: skyblue;
+  height: 150px;
+  width: 5px;
+}
+
+.title {
+  color: deepskyblue;
+  font-family: monospace;
+  font-size: 2.2rem;
+  animation: myanimation 2s infinite linear alternate-reverse;
+}
+
+@keyframes myanimation {
+  from {
+    transform: scale(0.95);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+form {
+  margin-top: 35px;
+}
+
+form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid deepskyblue;
+  padding: 5px 10px;
+  background: rgba(61, 59, 59, 0.1);
+  margin: 10px 0px;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+form input::placeholder {
+  color: white;
+}
+
+.submit {
+  background: deepskyblue;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+form input[type="submit"]:hover {
+  transform: scale(0.9);
+}
+
+.result {
+  color: white;
+  font-family: monospace;
+  font-size: 1.2rem;
+  line-height: 25px;
+  margin-top: -60px;
+}
+/* 
+@media only screen and (max-width: 1240px) {
+  .container {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .container {
+    width: 60% !important;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .container {
+    width: 70% !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .container {
+    width: 90% !important;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        width: 80% !important;
+    }
+}
+
+@media only screen and (max-height: 690px){
+    .container {
+        height: 95% !important;
+    }
+}
+
+@media only screen and (max-height: 560px){
+    .container {
+        height: 100% !important;
+    }
+} */
+
+
+@media screen and (min-width: 1450px){
+  .container {
+    width: 50%;
+  }
+}
+
+
+@media screen and (min-width: 1000px){
+  .container {
+    width: 70%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

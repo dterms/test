@@ -1,0 +1,50 @@
+
+.services {
+    
+    margin: 3rem 0;
+
+    .container {
+        width: 80%;
+        margin: 5rem auto;
+        @include flex();
+        grid-gap: 3rem;
+
+        .services__service {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            overflow: hidden;
+    
+            .services__serviceHeader {
+                width: 100%;
+                height: 350px;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+    
+            }
+    
+            .services__serviceBody {
+
+                p:first-child {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+
+                p:last-child {
+                    color: $gray
+                }
+
+                background: $white;
+                padding: 3rem 2rem;
+            }
+        }
+
+    }
+}
